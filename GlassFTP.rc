@@ -1,0 +1,411 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 한국어 resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+#ifdef _WIN32
+LANGUAGE LANG_KOREAN, SUBLANG_DEFAULT
+#pragma code_page(949)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 18, 1\r\n"
+    "#pragma code_page(949)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\GlassFTP.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.kor\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\icon2.ico"
+IDI_GET_ICON            ICON                    "res\\ARW04LT.ICO"
+IDI_PUT_ICON            ICON                    "res\\ARW04RT.ICO"
+IDI_MAIN_ICON           ICON                    "res\\NET08.ICO"
+IDI_DELETE_ICON         ICON                    "res\\delete.ico"
+IDI_PARENT_ICON         ICON                    "res\\up.ico"
+IDI_REFRESH             ICON                    "res\\refresh.ico"
+IDI_SHBF_ICON           ICON                    "res\\ofold162.ico"
+IDI_NEWFORDER_ICON      ICON                    "res\\folder_open.ico"
+IDI_SETPATH             ICON                    "res\\Recycle.ico"
+IDI_GETINFO             ICON                    "res\\Getinfo.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 203, 143
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP
+FONT 9, "굴림", 0, 0, 0x0
+BEGIN
+    ICON            IDI_MAIN_ICON,IDC_STATIC,15,20,20,20
+    CTEXT           "GlassFTP Version 3.1",IDC_STATIC,56,25,89,8,SS_NOPREFIX
+    LTEXT           "Copyright (c) 2010 - Kim, Byung Kyu",IDC_STATIC,40,44,123,10
+    DEFPUSHBUTTON   "확 인",IDOK,66,91,69,24,WS_GROUP
+    CTEXT           "cdecl@interpark.com, cdeclare@gmail.com",IDC_STATIC,7,58,189,13
+END
+
+IDD_GLASSFTP_DIALOG DIALOGEX 0, 0, 439, 355
+STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "GlassFTP  Ver 3.1 - 2010.08.03 "
+MENU IDR_MAINMENU
+FONT 9, "굴림", 0, 0, 0x1
+BEGIN
+    CONTROL         "Asc",IDC_RADIO_FILE_TRANS_ASC,"Button",BS_AUTORADIOBUTTON | BS_PUSHLIKE | WS_GROUP,209,23,19,14
+    CONTROL         "Bin",IDC_RADIO_FILE_TRANS_BIN,"Button",BS_AUTORADIOBUTTON | BS_PUSHLIKE,209,37,19,14
+    PUSHBUTTON      ">>",IDC_BTN_PUT,210,76,18,33,BS_ICON
+    CONTROL         "Auto",IDC_RADIO_FILE_TRANS_AUTO,"Button",BS_AUTORADIOBUTTON | BS_PUSHLIKE,209,51,19,14
+    PUSHBUTTON      "<<",IDC_BTN_GET,210,116,18,33,BS_ICON
+    PUSHBUTTON      "Button2",IDC_BTN_CLIENT_NEWFORDER,11,245,18,15,BS_ICON
+    PUSHBUTTON      "Button2",IDC_BTN_CLIENT_DELETE,31,245,18,15,BS_ICON
+    PUSHBUTTON      "새로고침 ",IDC_BTN_CLIENT_REFRESH,184,245,18,15,BS_ICON
+    PUSHBUTTON      "Button2",IDC_BTN_SERVER_NEWFORDER,235,245,18,15,BS_ICON
+    PUSHBUTTON      "Button2",IDC_BTN_SERVER_DELETE,255,245,18,15,BS_ICON
+    PUSHBUTTON      "새로고침",IDC_BTN_SERVER_REFRESH,409,245,18,15,BS_ICON
+    COMBOBOX        IDC_COMBO_SERVER,265,3,144,77,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Button2",IDC_BTN_SERVER_CLOSE,413,3,14,14,BS_ICON
+    COMBOBOX        IDC_COMBO_SERVER_PATH,233,25,176,81,CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Button2",IDC_BTN_SERVER_PARENT,413,24,14,13,BS_ICON
+    CONTROL         "파일 업로드, 삭제, 폴더생성을 위에 선택된 서버에만 적용 !!",IDC_CHECK_CURRENT_SERVER,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,231,264,201,11
+    PUSHBUTTON      "로그 지우기",IDC_BTN_LOG_CLEAR,7,344,40,11,BS_FLAT
+    EDITTEXT        IDC_EDIT_LOG,7,285,425,57,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_WANTRETURN | NOT WS_BORDER | WS_VSCROLL,WS_EX_CLIENTEDGE
+    GROUPBOX        "",IDC_STATIC,7,15,201,248
+    CONTROL         "List1",IDC_LIST_CLIENT,"SysListView32",LVS_REPORT | LVS_EDITLABELS | WS_BORDER | WS_TABSTOP,9,40,195,203
+    EDITTEXT        IDC_EDIT_CLIENT_PATH,26,23,158,13,ES_MULTILINE | ES_AUTOHSCROLL | ES_WANTRETURN | NOT WS_BORDER,WS_EX_CLIENTEDGE
+    PUSHBUTTON      "Button2",IDC_BTN_SHBF,9,23,14,13,BS_ICON | BS_FLAT
+    CONTROL         "List1",IDC_LIST_SERVER,"SysListView32",LVS_REPORT | WS_BORDER | WS_TABSTOP,233,40,195,203
+    PUSHBUTTON      "Button2",IDC_BTN_CLIENT_PARENT,189,24,14,13,BS_ICON
+    GROUPBOX        "",IDC_STATIC,231,15,201,248
+    LTEXT           "서버목록:",IDC_STATIC,232,7,31,11
+    CONTROL         "Progress1",IDC_PROGRESS_FTP,"msctls_progress32",WS_BORDER,134,345,197,10
+    CTEXT           "[선택된서버적용]",IDC_STATIC_STATUS,376,345,56,10,SS_SUNKEN
+    CTEXT           "[백업안함]",IDC_STATIC_STATUS_BACKUP,333,345,42,10,SS_SUNKEN
+    LTEXT           "",IDC_STATIC_TIMER,51,345,81,10,SS_SUNKEN
+    CONTROL         "클라이언트-서버 경로 이동 동기화",IDC_PATH_SYNC,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,91,264,120,11
+    LTEXT           "",IDC_STATIC_STATUS_CLIENTS,55,249,62,10
+    LTEXT           "",IDC_STATIC_STATUS_SERVERS,279,249,62,10
+END
+
+IDD_FORDERNAME DIALOG  0, 0, 171, 29
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "새폴더 이름"
+FONT 9, "굴림"
+BEGIN
+    EDITTEXT        IDC_EDIT_FORDERNAME,7,7,83,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "확인",IDOK,93,7,34,14
+    PUSHBUTTON      "취소",IDCANCEL,130,7,34,14
+END
+
+IDD_SERVER DIALOGEX 0, 0, 291, 271
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "서버 설정"
+FONT 9, "굴림", 0, 0, 0x1
+BEGIN
+    LISTBOX         IDC_LIST_SERVER,7,20,113,219,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP,WS_EX_STATICEDGE
+    LTEXT           "서버명",IDC_STATIC,133,31,33,12
+    GROUPBOX        " 설정된 서버 ",IDC_STATIC,7,7,117,257
+    GROUPBOX        "Setting",IDC_STATIC,127,7,157,257
+    LTEXT           "IP 주소",IDC_STATIC,133,65,40,12
+    LTEXT           "User ID",IDC_STATIC,134,121,40,12
+    LTEXT           "Password",IDC_STATIC,134,135,40,12
+    EDITTEXT        IDC_EDIT_NAME,179,27,99,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_IP,179,62,99,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_ID,180,117,99,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PASSWORD,180,132,99,12,ES_PASSWORD | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_DEFAULT_PATH,135,167,144,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "연 결",IDC_BTN_OPEN,193,243,38,15
+    PUSHBUTTON      "닫 기",IDC_BTN_EXIT,239,243,38,15
+    LTEXT           "서버 기본 경로",IDC_STATIC,134,156,105,12
+    PUSHBUTTON      "저 장",IDC_BTN_SAVE,239,226,38,15
+    PUSHBUTTON      "새로만들기",IDC_BTN_NEW,193,226,38,15
+    PUSHBUTTON      "삭 제",IDC_BTN_DELETE,81,245,38,15
+    LTEXT           "※ 세미콜론(;) 으로 서버 구분",IDC_STATIC,132,50,98,10
+    LTEXT           "포트",IDC_STATIC,133,78,40,12
+    EDITTEXT        IDC_EDIT_PORT,179,76,24,12,ES_AUTOHSCROLL
+    CONTROL         "로컬 기본 경로 지정 ",IDC_CHECK_SELECT_CLIENTPATH,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,134,189,142,13
+    EDITTEXT        IDC_EDIT_DEFAULT_PATH_CLIENT,149,204,130,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BTN_SELECT_CLIENT_PATH,135,204,12,11
+    CONTROL         "액티브모드",IDC_RADIO_MODE_ACTIVE,"Button",BS_AUTORADIOBUTTON | WS_GROUP,179,96,47,10
+    CONTROL         "패시브모드",IDC_RADIO_MODE_PASSIVE,"Button",BS_AUTORADIOBUTTON,229,96,45,10
+    LTEXT           "전송 모드",IDC_STATIC,133,96,31,12
+END
+
+IDD_OPTION DIALOGEX 0, 0, 235, 235
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "옵션"
+FONT 9, "굴림", 0, 0, 0x0
+BEGIN
+    PUSHBUTTON      "닫 기",IDOK,189,214,39,14
+    LTEXT           "기본편집기 ",IDC_STATIC,12,23,45,13
+    EDITTEXT        IDC_EDIT_FILEPATH,59,21,149,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BTN_FILEDLG,210,21,12,12
+    PUSHBUTTON      "저 장",IDC_BTN_SAVE,148,214,39,14
+    GROUPBOX        " 기본 설정 ",IDC_STATIC,7,6,221,189
+    LTEXT           "자동 새로고침 시간",IDC_STATIC,12,81,61,16
+    EDITTEXT        IDC_EDIT_INTERVAL,75,78,33,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "초   (90초 밑으로 설정하지 마세요)",IDC_STATIC,111,81,110,12
+    LTEXT           "서버 파일개수 제한",IDC_STATIC,12,103,69,12
+    CONTROL         "설정안함",IDC_RADIO_SERVERFILECOUNT,"Button",BS_AUTORADIOBUTTON | WS_GROUP,86,99,47,15
+    CONTROL         "설정",IDC_RADIO_SERVERFILECOUNT2,"Button",BS_AUTORADIOBUTTON,135,99,31,15
+    EDITTEXT        IDC_EDIT_FILECOUNT,168,100,41,13,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "설정안함",IDC_RADIO_BACKUP1,"Button",BS_AUTORADIOBUTTON | WS_GROUP,86,119,47,15
+    CONTROL         "설정",IDC_RADIO_BACKUP2,"Button",BS_AUTORADIOBUTTON,135,119,31,15
+    EDITTEXT        IDC_EDIT_BACKUP,168,121,41,13,ES_AUTOHSCROLL
+    LTEXT           "다운로드시 백업생성",IDC_STATIC,12,122,69,12
+    EDITTEXT        IDC_EDIT_AUTOEXT,12,162,210,21,ES_MULTILINE | ES_WANTRETURN | WS_VSCROLL
+    LTEXT           "Auto파일 전송모드시 Ascii파일 확장자 지정(세미콜론으로 구분)",IDC_STATIC,12,150,207,12
+    LTEXT           "서버설정파일",IDC_STATIC,12,58,41,11
+    EDITTEXT        IDC_EDIT_FILEPATH_CONFIG,59,56,149,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BTN_FILEDLG_CONFIG,210,56,12,12
+    LTEXT           "Diff 툴",IDC_STATIC,13,40,45,13
+    EDITTEXT        IDC_EDIT_DIFFPATH,59,38,149,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BTN_FILEDLG_DIFF,210,38,12,12
+END
+
+IDD_MESSAGEBOX DIALOG  0, 0, 167, 75
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "GlassFTP"
+FONT 9, "굴림"
+BEGIN
+    DEFPUSHBUTTON   "예(&Y)",IDOK,7,54,41,14
+    PUSHBUTTON      "아니요(&N)",IDCANCEL,119,54,41,14
+    CTEXT           "",IDC_STATIC_MSG,7,13,153,35
+    PUSHBUTTON      "모두 예(&A)",IDOKALL,63,54,41,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 3,1,0,0
+ PRODUCTVERSION 3,1,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041204b0"
+        BEGIN
+            VALUE "FileDescription", "GlassFTP 응용 프로그램"
+            VALUE "FileVersion", "3, 1, 0, 0"
+            VALUE "InternalName", "GlassFTP"
+            VALUE "LegalCopyright", "Copyright (C) 2008"
+            VALUE "OriginalFilename", "GlassFTP.EXE"
+            VALUE "ProductName", "GlassFTP 응용 프로그램 by cdecl"
+            VALUE "ProductVersion", "GlassFTP "
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x412, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 196
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 136
+    END
+
+    IDD_GLASSFTP_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 432
+        TOPMARGIN, 3
+    END
+
+    IDD_FORDERNAME, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 164
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 22
+    END
+
+    IDD_SERVER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 284
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 264
+    END
+
+    IDD_OPTION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 228
+    END
+
+    IDD_MESSAGEBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 160
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 68
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP1             BITMAP                  "res\\bitmap1.bmp"
+IDB_BITMAP2             BITMAP                  "res\\My Computer.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINMENU MENU 
+BEGIN
+    POPUP "파일(&F)"
+    BEGIN
+        MENUITEM "연결(&O)",                      IDM_OPEN
+        MENUITEM "연결끊기(&C)",                    IDM_CLOSEALL, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "종료(&X)",                      IDM_EXIT
+    END
+    POPUP "로컬편집(&E)"
+    BEGIN
+        MENUITEM "이름바꾸기",                       IDM_RENAME
+        MENUITEM "편집하기(&E)",                    IDM_EDITING
+        MENUITEM "파일비교 (서버 같은 파일명)",            IDM_DIFF_CLIENT
+        MENUITEM SEPARATOR
+        MENUITEM "실행하기(&R)",                    IDM_EXECUTE
+    END
+    POPUP "서버편집(&S)"
+    BEGIN
+        MENUITEM "파일보기",                        IDM_FILEVIEW_SERVER
+        MENUITEM "파일비교 (클라이언트 같은 파일명)",         IDM_DIFF_SERVER
+        MENUITEM SEPARATOR
+        MENUITEM "실행하기(&R)",                    IDM_EXECUTE_SERVER
+    END
+    POPUP "도구(&T)"
+    BEGIN
+        MENUITEM "옵션(&O)",                      IDM_OPTION
+        MENUITEM SEPARATOR
+        MENUITEM "현재 로컬 경로를 프로그램 시작시 디폴트 경로로",  IDM_SET_DEFAULT_PATH
+    END
+    POPUP "도움말(&H)"
+    BEGIN
+        MENUITEM "GlassFtp 정보(&I)",             IDM_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "GlassFTP 정보(&A)..."
+    IDP_SOCKETS_INIT_FAILED "Windows 소켓 초기화에 실패하였습니다."
+END
+
+#endif    // 한국어 resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+#ifdef _WIN32
+LANGUAGE 18, 1
+#pragma code_page(949)
+#endif //_WIN32
+#include "res\GlassFTP.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.kor\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

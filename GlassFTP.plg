@@ -1,0 +1,63 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: GlassFTP - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x412 /fo"Debug/GlassFTP.res" /d "_DEBUG" /d "_AFXDLL" "E:\My_Projects\Visual C++\GlassFTPSync\GlassFTP.rc"" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP56A.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Debug/" /Fp"Debug/GlassFTP.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\My_Projects\Visual C++\GlassFTPSync\FileListCtrl.cpp"
+"E:\My_Projects\Visual C++\GlassFTPSync\ForderName.cpp"
+"E:\My_Projects\Visual C++\GlassFTPSync\Ftp.cpp"
+"E:\My_Projects\Visual C++\GlassFTPSync\GlassFTP.cpp"
+"E:\My_Projects\Visual C++\GlassFTPSync\GlassFTPDlg.cpp"
+"E:\My_Projects\Visual C++\GlassFTPSync\OpenDlg.cpp"
+"E:\My_Projects\Visual C++\GlassFTPSync\ServerSetting.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP56A.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP56D.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Debug/" /Fp"Debug/GlassFTP.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\My_Projects\Visual C++\GlassFTPSync\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP56D.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP56E.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/GlassFTP.pdb" /debug /machine:I386 /out:"Debug/GlassFTP.exe" /pdbtype:sept 
+".\Debug\FileListCtrl.obj"
+".\Debug\ForderName.obj"
+".\Debug\Ftp.obj"
+".\Debug\GlassFTP.obj"
+".\Debug\GlassFTPDlg.obj"
+".\Debug\OpenDlg.obj"
+".\Debug\ServerSetting.obj"
+".\Debug\StdAfx.obj"
+".\Debug\GlassFTP.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP56E.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+FileListCtrl.cpp
+ForderName.cpp
+Ftp.cpp
+GlassFTP.cpp
+GlassFTPDlg.cpp
+OpenDlg.cpp
+ServerSetting.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+GlassFTP.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: GlassFTP - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\cdecl\LOCALS~1\Temp\RSP7E2.tmp" with contents
+[
+/nologo /MT /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /FR"Release/" /Fp"Release/GlassFTPSync.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"E:\MyProjects\VC6\GlassFTPSync\GlassFTPDlg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\cdecl\LOCALS~1\Temp\RSP7E2.tmp" 
+Creating temporary file "C:\DOCUME~1\cdecl\LOCALS~1\Temp\RSP7E3.tmp" with contents
+[
+winmm.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/GlassFTP.pdb" /machine:I386 /out:"Release/GlassFTP.exe" 
+.\Release\AutoList.obj
+.\Release\ComboServerPath.obj
+.\Release\FileListCtrl.obj
+.\Release\ForderName.obj
+.\Release\Ftp.obj
+.\Release\GlassFTP.obj
+.\Release\GlassFTPDlg.obj
+.\Release\MessageDlg.obj
+.\Release\OpenDlg.obj
+.\Release\OptionDlg.obj
+.\Release\ServerSetting.obj
+.\Release\StdAfx.obj
+.\Release\Tokens.obj
+.\Release\GlassFTP.res
+]
+Creating command line "link.exe @C:\DOCUME~1\cdecl\LOCALS~1\Temp\RSP7E3.tmp"
+<h3>Output Window</h3>
+Compiling...
+GlassFTPDlg.cpp
+E:\MyProjects\VC6\GlassFTPSync\GlassFTPDlg.cpp(4) : fatal error C1853: 'Release/GlassFTPSync.pch' is not a precompiled header file created with this compiler
+Error executing cl.exe.
+Creating temporary file "C:\DOCUME~1\cdecl\LOCALS~1\Temp\RSP7E4.tmp" with contents
+[
+/nologo /o"Release/GlassFTPSync.bsc" 
+.\Release\StdAfx.sbr
+.\Release\AutoList.sbr
+.\Release\ComboServerPath.sbr
+.\Release\FileListCtrl.sbr
+.\Release\ForderName.sbr
+.\Release\Ftp.sbr
+.\Release\GlassFTP.sbr
+.\Release\GlassFTPDlg.sbr
+.\Release\MessageDlg.sbr
+.\Release\OpenDlg.sbr
+.\Release\OptionDlg.sbr
+.\Release\ServerSetting.sbr
+.\Release\Tokens.sbr]
+Creating command line "bscmake.exe @C:\DOCUME~1\cdecl\LOCALS~1\Temp\RSP7E4.tmp"
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+GlassFTP.exe - 1 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
