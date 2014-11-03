@@ -13,13 +13,11 @@
 #undef APSTUDIO_READONLY_SYMBOLS
 
 /////////////////////////////////////////////////////////////////////////////
-// 한국어 resources
+// 한국어(대한민국) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
-#ifdef _WIN32
 LANGUAGE LANG_KOREAN, SUBLANG_DEFAULT
 #pragma code_page(949)
-#endif //_WIN32
 
 #ifdef APSTUDIO_INVOKED
 /////////////////////////////////////////////////////////////////////////////
@@ -88,18 +86,17 @@ STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP
 FONT 9, "굴림", 0, 0, 0x0
 BEGIN
     ICON            IDI_MAIN_ICON,IDC_STATIC,15,20,20,20
-    CTEXT           "GlassFTP Version 3.1",IDC_STATIC,56,25,89,8,SS_NOPREFIX
-    LTEXT           "Copyright (c) 2010 - Kim, Byung Kyu",IDC_STATIC,40,44,123,10
+    CTEXT           "GlassFTP Version 3.2",IDC_STATIC,56,25,89,8,SS_NOPREFIX
     DEFPUSHBUTTON   "확 인",IDOK,66,91,69,24,WS_GROUP
-    CTEXT           "cdecl@interpark.com, cdeclare@gmail.com",IDC_STATIC,7,58,189,13
+    CTEXT           "Kim, Byung-Kyu ( cdeclare@gmail.com )",IDC_STATIC,7,58,189,13
 END
 
 IDD_GLASSFTP_DIALOG DIALOGEX 0, 0, 439, 355
 STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
 EXSTYLE WS_EX_APPWINDOW
-CAPTION "GlassFTP  Ver 3.1 - 2010.08.03 "
+CAPTION "GlassFTP 3.2 "
 MENU IDR_MAINMENU
-FONT 9, "굴림", 0, 0, 0x1
+FONT 9, "굴림", 400, 0, 0x81
 BEGIN
     CONTROL         "Asc",IDC_RADIO_FILE_TRANS_ASC,"Button",BS_AUTORADIOBUTTON | BS_PUSHLIKE | WS_GROUP,209,23,19,14
     CONTROL         "Bin",IDC_RADIO_FILE_TRANS_BIN,"Button",BS_AUTORADIOBUTTON | BS_PUSHLIKE,209,37,19,14
@@ -137,7 +134,7 @@ BEGIN
     LTEXT           "",IDC_STATIC_STATUS_SERVERS,279,249,62,10
 END
 
-IDD_FORDERNAME DIALOG  0, 0, 171, 29
+IDD_FORDERNAME DIALOG 0, 0, 171, 29
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "새폴더 이름"
 FONT 9, "굴림"
@@ -213,7 +210,7 @@ BEGIN
     PUSHBUTTON      "...",IDC_BTN_FILEDLG_DIFF,210,38,12,12
 END
 
-IDD_MESSAGEBOX DIALOG  0, 0, 167, 75
+IDD_MESSAGEBOX DIALOG 0, 0, 167, 75
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "GlassFTP"
 FONT 9, "굴림"
@@ -269,7 +266,7 @@ END
 //
 
 #ifdef APSTUDIO_INVOKED
-GUIDELINES DESIGNINFO 
+GUIDELINES DESIGNINFO
 BEGIN
     IDD_ABOUTBOX, DIALOG
     BEGIN
@@ -334,7 +331,7 @@ IDB_BITMAP2             BITMAP                  "res\\My Computer.ico"
 // Menu
 //
 
-IDR_MAINMENU MENU 
+IDR_MAINMENU MENU
 BEGIN
     POPUP "파일(&F)"
     BEGIN
@@ -376,13 +373,13 @@ END
 // String Table
 //
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     IDS_ABOUTBOX            "GlassFTP 정보(&A)..."
     IDP_SOCKETS_INIT_FAILED "Windows 소켓 초기화에 실패하였습니다."
 END
 
-#endif    // 한국어 resources
+#endif    // 한국어(대한민국) resources
 /////////////////////////////////////////////////////////////////////////////
 
 

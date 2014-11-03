@@ -1353,7 +1353,7 @@ void CGlassFTPDlg::WriteLog(CString strLog)
 
 	int nLen = pEdit->GetWindowTextLength();
 
-	if (pEdit->GetLimitText() <= nLen) {
+	if (pEdit->GetLimitText() <= (size_t)nLen) {
 		pEdit->SetWindowText(_T(""));	
 		nLen = 0;
 	}
