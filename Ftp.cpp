@@ -48,7 +48,7 @@ BOOL CFtp::Open(CString strServer, CString strUserID, CString strPassword,
 			bRet = FALSE;
 		}
 	}
-	catch (CInternetException ie) {
+	catch (CInternetException &ie) {
 		bRet = FALSE;
 		Release();
 	}

@@ -5,6 +5,7 @@
 #include "stdafx.h"
 #include "glassftp.h"
 #include "AutoList.h"
+#include <iterator>
 
 
 #ifdef _DEBUG
