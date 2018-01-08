@@ -65,16 +65,27 @@ END
 // Icon with lowest ID value placed first to ensure application icon
 // remains consistent on all systems.
 IDR_MAINFRAME           ICON                    "res\\icon2.ico"
+
 IDI_GET_ICON            ICON                    "res\\ARW04LT.ICO"
+
 IDI_PUT_ICON            ICON                    "res\\ARW04RT.ICO"
+
 IDI_MAIN_ICON           ICON                    "res\\NET08.ICO"
+
 IDI_DELETE_ICON         ICON                    "res\\delete.ico"
+
 IDI_PARENT_ICON         ICON                    "res\\up.ico"
+
 IDI_REFRESH             ICON                    "res\\refresh.ico"
+
 IDI_SHBF_ICON           ICON                    "res\\ofold162.ico"
+
 IDI_NEWFORDER_ICON      ICON                    "res\\folder_open.ico"
+
 IDI_SETPATH             ICON                    "res\\Recycle.ico"
+
 IDI_GETINFO             ICON                    "res\\Getinfo.ico"
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -86,7 +97,7 @@ STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP
 FONT 9, "굴림", 0, 0, 0x0
 BEGIN
     ICON            IDI_MAIN_ICON,IDC_STATIC,15,20,20,20
-    CTEXT           "GlassFTP Version 3.2",IDC_STATIC,56,25,89,8,SS_NOPREFIX
+    CTEXT           "GlassFTP - 빌드 180108",IDC_STATIC,56,25,89,8,SS_NOPREFIX
     DEFPUSHBUTTON   "확 인",IDOK,66,91,69,24,WS_GROUP
     CTEXT           "Kim, Byung-Kyu ( cdeclare@gmail.com )",IDC_STATIC,7,58,189,13
 END
@@ -94,7 +105,7 @@ END
 IDD_GLASSFTP_DIALOG DIALOGEX 0, 0, 439, 355
 STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
 EXSTYLE WS_EX_APPWINDOW
-CAPTION "GlassFTP 3.2 "
+CAPTION "GlassFTP - 빌드 180108"
 MENU IDR_MAINMENU
 FONT 9, "굴림", 400, 0, 0x81
 BEGIN
@@ -178,16 +189,16 @@ BEGIN
     LTEXT           "전송 모드",IDC_STATIC,133,96,31,12
 END
 
-IDD_OPTION DIALOGEX 0, 0, 235, 235
+IDD_OPTION DIALOGEX 0, 0, 235, 268
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "옵션"
 FONT 9, "굴림", 0, 0, 0x0
 BEGIN
-    PUSHBUTTON      "닫 기",IDOK,189,214,39,14
+    PUSHBUTTON      "닫 기",IDOK,189,247,39,14
     LTEXT           "기본편집기 ",IDC_STATIC,12,23,45,13
     EDITTEXT        IDC_EDIT_FILEPATH,59,21,149,12,ES_AUTOHSCROLL
     PUSHBUTTON      "...",IDC_BTN_FILEDLG,210,21,12,12
-    PUSHBUTTON      "저 장",IDC_BTN_SAVE,148,214,39,14
+    PUSHBUTTON      "저 장",IDC_BTN_SAVE,148,247,39,14
     GROUPBOX        " 기본 설정 ",IDC_STATIC,7,6,221,189
     LTEXT           "자동 새로고침 시간",IDC_STATIC,12,81,61,16
     EDITTEXT        IDC_EDIT_INTERVAL,75,78,33,12,ES_AUTOHSCROLL | ES_NUMBER
@@ -200,14 +211,16 @@ BEGIN
     CONTROL         "설정",IDC_RADIO_BACKUP2,"Button",BS_AUTORADIOBUTTON,135,119,31,15
     EDITTEXT        IDC_EDIT_BACKUP,168,121,41,13,ES_AUTOHSCROLL
     LTEXT           "다운로드시 백업생성",IDC_STATIC,12,122,69,12
-    EDITTEXT        IDC_EDIT_AUTOEXT,12,162,210,21,ES_MULTILINE | ES_WANTRETURN | WS_VSCROLL
-    LTEXT           "Auto파일 전송모드시 Ascii파일 확장자 지정(세미콜론으로 구분)",IDC_STATIC,12,150,207,12
+    EDITTEXT        IDC_EDIT_AUTOEXT,12,193,210,21,ES_MULTILINE | ES_WANTRETURN | WS_VSCROLL
+    LTEXT           "Auto파일 전송모드시 Ascii파일 확장자 지정(세미콜론으로 구분)",IDC_STATIC,12,181,207,12
     LTEXT           "서버설정파일",IDC_STATIC,12,58,41,11
     EDITTEXT        IDC_EDIT_FILEPATH_CONFIG,59,56,149,12,ES_AUTOHSCROLL
     PUSHBUTTON      "...",IDC_BTN_FILEDLG_CONFIG,210,56,12,12
     LTEXT           "Diff 툴",IDC_STATIC,13,40,45,13
     EDITTEXT        IDC_EDIT_DIFFPATH,59,38,149,12,ES_AUTOHSCROLL
     PUSHBUTTON      "...",IDC_BTN_FILEDLG_DIFF,210,38,12,12
+    LTEXT           "로그 파일 기록",IDC_STATIC,12,144,73,12
+    CONTROL         " 파일기록",IDC_CHECK_LOGBACKUP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,86,143,46,10
 END
 
 IDD_MESSAGEBOX DIALOG 0, 0, 167, 75
@@ -304,7 +317,7 @@ BEGIN
         LEFTMARGIN, 7
         RIGHTMARGIN, 228
         TOPMARGIN, 7
-        BOTTOMMARGIN, 228
+        BOTTOMMARGIN, 261
     END
 
     IDD_MESSAGEBOX, DIALOG
@@ -324,7 +337,9 @@ END
 //
 
 IDB_BITMAP1             BITMAP                  "res\\bitmap1.bmp"
+
 IDB_BITMAP2             BITMAP                  "res\\My Computer.ico"
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -365,6 +380,27 @@ BEGIN
     BEGIN
         MENUITEM "GlassFtp 정보(&I)",             IDM_ABOUT
     END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_OPTION AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_GLASSFTP_DIALOG AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_ABOUTBOX AFX_DIALOG_LAYOUT
+BEGIN
+    0
 END
 
 

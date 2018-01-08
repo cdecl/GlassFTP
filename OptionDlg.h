@@ -10,7 +10,7 @@
 
 namespace NS_Config {
 	static const TCHAR SECTION[]		= _T("Config");
-	static const TCHAR INI_FILENAME[]	= _T("GlassFtp.ini");
+	static const TCHAR INI_FILENAME[]	= _T(".\\GlassFTP.ini");
 	static const TCHAR AUTOEXT_LIST[]	= 
 		_T("txt;h;hpp;cpp;c;java;jsp;asp;html;htm;css;vbs;js;")
 		_T("py;pl;php;php3;xml;properties");

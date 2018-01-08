@@ -12,6 +12,7 @@
 #include "FileListCtrl.h"
 #include "ComboServerPath.h"
 #include "Ftp.h"
+#include <fstream>
 
 #include "AutoList.h"
 #include "clientpath.h"
@@ -95,7 +96,7 @@ protected:
 	afx_msg void OnSetDefaultPath();
 	afx_msg void OnRButtonDown(UINT nFlags, CPoint point);
 	afx_msg void OnExit();
-	afx_msg void OnTimer(UINT nIDEvent);
+	afx_msg void OnTimer(UINT_PTR nIDEvent);
 	afx_msg void OnSelchangeComboServerPath();
 	afx_msg HBRUSH OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor);
 	afx_msg void OnBtnLogClear();
@@ -119,6 +120,7 @@ private:
 	BOOL m_bIDOKALL;
 
 	CAutoList m_AutoList;
+	std::ofstream m_logFile;
 
 private:
 	void ReName(const CString &strOldName, const CString &strNewName);
@@ -135,6 +137,7 @@ public:
 	void GetFilesImp();
 	void PutFiles();
 	UINT GetInterval();
+	CString GetWriteLogFileMode();
 	CString GetClientDefaultPath();
 	CString GetEditorPathName();
 	CString GetDiffPathName();
@@ -150,6 +153,7 @@ public:
 	BOOL ListViewFileExists(CFileListCtrl &listView, CString strFileName);
 	void DeleteServerFileImp();
 	void WriteLog(CString strLog);
+	void WriteLogFile(const CString &strLog);
 	void WriteSeparator();
 	void ServerRefresh();
 	void ClientRefresh();

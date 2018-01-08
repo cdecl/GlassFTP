@@ -156,6 +156,25 @@ void COptionDlg::OnBtnSave()
 		);
 	}
 
+
+	if (static_cast<CButton *>(GetDlgItem(IDC_CHECK_LOGBACKUP))->GetCheck()) {
+		::WritePrivateProfileString(
+			SECTION,
+			_T("FileLog"),
+			_T("1"),
+			INI_FILENAME
+		);
+	}
+	else {
+		GetDlgItemText(IDC_CHECK_LOGBACKUP, strValue);
+		::WritePrivateProfileString(
+			SECTION,
+			_T("FileLog"),
+			_T("0"),
+			INI_FILENAME
+		);
+	}
+
 	// Auto모드시 파일 ASCII 파일 확장자 지정
 	GetDlgItemText(IDC_EDIT_AUTOEXT, strValue);
 	::WritePrivateProfileString (
@@ -164,6 +183,7 @@ void COptionDlg::OnBtnSave()
 			strValue,
 			INI_FILENAME
 	);
+
 
 	EndDialog(IDOK);
 }
@@ -270,6 +290,26 @@ void COptionDlg::GetConfig()
 		static_cast<CEdit *>(GetDlgItem(IDC_EDIT_BACKUP))->SetWindowText(strBackup);
 		static_cast<CButton *>(GetDlgItem(IDC_RADIO_BACKUP2))->SetCheck(TRUE);
 	}
+
+
+	///////////////////////////////////////////////
+	::GetPrivateProfileString(
+		SECTION,
+		_T("FileLog"),
+		_T(""),
+		sz,
+		SZ_SIZE,
+		INI_FILENAME
+	);
+
+	CString strFileLog = sz;
+	if (_T("1") == strFileLog) {
+		static_cast<CButton *>(GetDlgItem(IDC_CHECK_LOGBACKUP))->SetCheck(TRUE);
+	}
+	else {
+		static_cast<CButton *>(GetDlgItem(IDC_CHECK_LOGBACKUP))->SetCheck(FALSE);
+	}
+	
 }
 
 

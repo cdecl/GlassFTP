@@ -82,6 +82,8 @@ CGlassFTPDlg::CGlassFTPDlg(CWnd* pParent /*=NULL*/)
 	m_editClientPath.SetParent(this);
 
 	m_Progress.SetRange32(0, 0);
+
+	m_logFile.open("GlassFTP.log", std::ofstream::out | std::ofstream::app);
 }
 
 void CGlassFTPDlg::DoDataExchange(CDataExchange* pDX)
@@ -531,6 +533,27 @@ CString CGlassFTPDlg::GetAutoTranListString()
 
 	return sz;
 }
+
+//////////////////////////////////////////////////////////////////////
+// 
+CString CGlassFTPDlg::GetWriteLogFileMode()
+{
+	using namespace NS_Config;
+
+	TCHAR sz[SZ_SIZE + 1];
+
+	::GetPrivateProfileString(
+		SECTION,
+		_T("FileLog"),
+		_T("0"),
+		sz,
+		SZ_SIZE,
+		INI_FILENAME
+	);
+
+	return sz;
+}
+
 
 
 
@@ -1360,6 +1383,8 @@ void CGlassFTPDlg::WriteLog(CString strLog)
 	
 	pEdit->SetSel(nLen, nLen);
 	pEdit->ReplaceSel(strTime + strLog + _T("\r\n")); 
+
+	WriteLogFile(strTime + strLog);
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -1375,9 +1400,20 @@ void CGlassFTPDlg::WriteSeparator()
 		nLen = 0;
 	}
 	
+	CString strLine = _T("──────────────────────────────────────────────────────────\r\n");
 	pEdit->SetSel(nLen, nLen);
-	pEdit->ReplaceSel(_T("──────────────────────────────────────────────────────────\r\n")); 
+	pEdit->ReplaceSel((strLine + _T("\r\n"))); 
+
+	WriteLogFile(strLine);
 }
+
+void CGlassFTPDlg::WriteLogFile(const CString &strLog)
+{
+	if (GetWriteLogFileMode() == _T("1")) {
+		m_logFile << (LPCSTR)strLog << endl;
+	}
+}
+
 
 //////////////////////////////////////////////////////////////////////
 // 로그 지우기
@@ -1977,7 +2013,7 @@ void CGlassFTPDlg::OnRButtonDown(UINT nFlags, CPoint point)
 	CDialog::OnRButtonDown(nFlags, point);
 }
 
-void CGlassFTPDlg::OnTimer(UINT nIDEvent) 
+void CGlassFTPDlg::OnTimer(UINT_PTR nIDEvent) 
 {
 	if (ID_TIMER == nIDEvent) {
 		// 주기적으로 Refrash

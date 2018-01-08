@@ -1,6 +1,6 @@
 //{{NO_DEPENDENCIES}}
-// Microsoft Visual C++ generated include file.
-// Used by GlassFTP.rc
+// Microsoft Visual C++에서 생성한 포함 파일입니다.
+// GlassFTP.rc에서 사용되고 있습니다.
 //
 #define IDC_BTN_SAVE                    2
 #define IDC_BTN_OPEN                    3
@@ -100,6 +100,7 @@
 #define IDC_BTN_SELECT_CLIENT_PATH      1050
 #define IDC_RADIO_MODE_ACTIVE           1051
 #define IDC_RADIO_MODE_PASSIVE          1052
+#define IDC_CHECK_LOGBACKUP             1053
 #define IDM_OPEN                        32771
 #define IDM_CLOSE                       32773
 #define IDM_CLOSEALL                    32774
@@ -122,9 +123,9 @@
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        211
+#define _APS_NEXT_RESOURCE_VALUE        214
 #define _APS_NEXT_COMMAND_VALUE         32792
-#define _APS_NEXT_CONTROL_VALUE         1052
+#define _APS_NEXT_CONTROL_VALUE         1054
 #define _APS_NEXT_SYMED_VALUE           101
 #endif
 #endif
