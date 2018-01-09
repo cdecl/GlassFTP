@@ -545,7 +545,7 @@ CString CGlassFTPDlg::GetWriteLogFileMode()
 	::GetPrivateProfileString(
 		SECTION,
 		_T("FileLog"),
-		_T("0"),
+		_T("1"),
 		sz,
 		SZ_SIZE,
 		INI_FILENAME

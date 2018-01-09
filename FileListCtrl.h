@@ -31,6 +31,7 @@ public:
 
 // Implementation
 public:
+	CString GetHumanReadFileSize(CString sz);
 	void EnableEventMessage(BOOL bEnable);
 	int FindItemString(const CString &str);
 	void Sort(int nSubItem, int nOrder = 1);

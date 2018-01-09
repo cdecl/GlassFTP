@@ -296,7 +296,7 @@ void COptionDlg::GetConfig()
 	::GetPrivateProfileString(
 		SECTION,
 		_T("FileLog"),
-		_T(""),
+		_T("1"),
 		sz,
 		SZ_SIZE,
 		INI_FILENAME

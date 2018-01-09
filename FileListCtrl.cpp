@@ -61,6 +61,26 @@ int CFileListCtrl::FindItemString(const CString &str)
 }
 
 
+CString CFileListCtrl::GetHumanReadFileSize(CString sz)
+{
+
+	CString s;
+	double size = _ttof(sz);
+
+	if (size > 0) {
+		int i = 0;
+		const char* units[] = { "B", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB" };
+		while (size > 1024) {
+			size /= 1024;
+			i++;
+		}
+
+		s.Format("%.*f %s", i, size, units[i]);
+	}
+	return s;
+}
+
+
 void CFileListCtrl::AddFile(
 	const CString &strFileName, const CString &strFilePath, const CString &strFileSize, 
 	const CString &strFileTime, BOOL bIsDirectory)
@@ -91,7 +111,8 @@ void CFileListCtrl::AddFile(
 	Item.mask = LVIF_TEXT;
 	Item.iItem = nRow;
 	Item.iSubItem = 1;
-	Item.pszText = (LPSTR)(LPCSTR)strFileSize;  
+	//Item.pszText = (LPSTR)(LPCSTR)strFileSize;  
+	Item.pszText = (LPSTR)(LPCSTR)GetHumanReadFileSize(strFileSize);;
 	SetItem(&Item);
 
 	Item.mask = LVIF_TEXT;
